@@ -1,0 +1,24 @@
+{
+  "name": "@unit-convert/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "convert": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest",
+    "lint": "eslint 'src/**/*.ts'",
+    "format": "prettier --write 'src/**/*.ts'",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@unit-convert/convert-core": "workspace:^",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "tsup": "^7.2.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.5.0"
+  }
+}
